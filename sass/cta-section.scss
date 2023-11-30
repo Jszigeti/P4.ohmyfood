@@ -1,0 +1,33 @@
+// CTA SECTION //
+.cta-section {
+    background-color: #F6F6F6;
+    @include flex(column);
+    align-items: center;
+    text-align: center;
+    & h2 {
+        margin: 39px 0 0 0;
+        height: 68px;
+    }
+    &__subtitle {
+        font-size: 18px;
+        font-weight: 300;
+        margin: 0;
+    }
+    &__btn {
+        border-radius: 25px;
+        background: linear-gradient(193deg, $main-color, $secondary-color);
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        padding: 13px 18.75px;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        color: white;
+        margin-top: 27px;
+        margin-bottom: 57px;
+        width: 218px;
+    }
+  &__btn:hover {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, $main-color, $secondary-color);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+  }
+}

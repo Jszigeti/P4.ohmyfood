@@ -1,0 +1,23 @@
+// FOOTER //
+footer {
+    background: #353535;
+    padding: 22px 25px;
+    @include flex(column);
+    gap: 16px;
+    .footer__title {
+      margin: 0;
+      font-family: Shrikhand, serif;
+      font-size: 18px;
+      font-weight: 400;
+      color: #fff;
+    }
+    .footer__nav {
+      @include flex(column);
+      gap: 7px;
+    }
+    .footer__link {
+      color: #fff;
+      @include flex(row);
+      gap: 11px;
+    }
+  }

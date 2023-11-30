@@ -1,0 +1,39 @@
+// INFO SECTION //
+.info-section {
+    background-color: #FFF;
+    padding: 48px 0 68px 0;
+    @include flex(column);
+    gap: 26px;
+    &__btncontainer {
+        @include flex(column);
+        gap: 24.94px;
+    }
+    &__btn {
+        border-radius: 20px;
+        background: #F6F6F6;
+        height: 72px;
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+        @include flex(row);
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 20px 0 32.51px;
+        padding: 0 38px 0 33px;
+        &--number {
+            @include flex(row);
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            background-color: $main-color;
+            width: 22px;
+            height: 22px;
+            border-radius: 11px;
+            font-style: normal;
+            font-size: 14.182px;
+            position: absolute;
+            left: 20px;
+        }
+        &--text {
+            width: 211px;
+        }
+    }
+}
