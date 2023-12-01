@@ -7,7 +7,7 @@
     place-items: center;
     opacity: 0.75;
     z-index: 1;
-    animation: loader 1s linear 4s forwards;
+    animation: loader 0.5s linear 3s forwards;
 
     &::after {
         content: "ohmyfood";
@@ -15,7 +15,7 @@
         font-size: 30px;
         font-weight: 400;
         color: #101010;
-        animation: load2 2s ease-in-out infinite;
+        animation: load2 1.5s ease-in-out infinite;
     }
 }
 
@@ -24,8 +24,12 @@
         opacity: 0.75;
     }
 
+    10% {
+        opacity: 0;
+    }
     100% {
         opacity: 0;
+        transform: scale(0);
     }
 }
 
