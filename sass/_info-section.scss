@@ -4,11 +4,11 @@
     padding: 48px 0 68px 0;
     @include flex(column);
     gap: 26px;
-    &__btncontainer {
+    &__bubblescontainer {
         @include flex(column);
         gap: 24.94px;
     }
-    &__btn {
+    &__bubble {
         border-radius: 20px;
         background: #F6F6F6;
         height: 72px;

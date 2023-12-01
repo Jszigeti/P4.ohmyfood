@@ -1,0 +1,142 @@
+// HEADER //
+.header__banner {
+    @include flex(row);
+    gap: 42px;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 0 13px 0;
+    &--goback {
+      position: absolute;
+      left: 17px;
+    }
+    &--title {
+      background-color: #FFF;
+      font-family: shrikhand, serif;
+      font-size: 30px;
+      font-weight: 400;
+      color: #101010;
+      text-align: center;
+      margin: 0;
+      padding: 0px 19px 0px 16px;
+    }
+  }
+
+// MAIN //
+main {
+    
+       
+}
+.restaurantspage-cover {
+    height: 275px;
+    object-fit: cover;
+    width: 100%;
+    }
+.main-container {
+    position: relative;
+    background: #f6f6f6;
+    border-radius: 40px 40px 0px 0px;
+    margin-top: -40px;
+    z-index: 1;
+    @include flex(column);
+    align-items: center;
+    gap: 40px;
+    padding-bottom: 40px;
+    &__title {
+        @include flex(row);
+        justify-content: space-between;
+        align-items: center;
+        padding: 32px 17px 0 17px;
+        margin: 0 17px;
+        width: 90%;
+        & h2 {
+            font-family: shrikhand, serif;
+            font-size: 28px;
+            font-weight: 400;
+            color: #101010;
+            margin: 0;
+        }
+
+    }
+    &__block {
+        @include flex(column);
+        gap: 12px;
+        width: 100%;
+        &--title {
+            font-size: 16px;
+            font-weight: 300;
+            color: #000;
+            margin: 0 0 0 13px;
+            height: 27px;
+            & span {
+                border-bottom: 3px solid $third-color;
+                padding-bottom: 5px;
+            }
+        }
+        &--link {
+
+        }
+    }
+    &__btn {
+        border-radius: 25px;
+        background: linear-gradient(193deg, $main-color, $secondary-color);
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+        padding: 16px 48px 15px 49px;
+        font-size: 16px;
+        color: white;
+        width: 186px;
+        text-align: center;
+    }
+    &__btn:hover {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, $main-color, $secondary-color);
+        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
+    }
+}
+
+// RESTAURANT CARD //
+.restaurant-card {
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
+    margin: 0 13px 0 13px;
+    @include flex(row);
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 5px;
+    &__content {
+        @include flex(column);
+        gap: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        &--title {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+            color: #000;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &--subtitle {
+            margin: 0;
+            font-size: 15px;
+            font-weight: 300;
+            color: #000;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+    &__price {
+        
+        p {
+            height: 45px;
+            margin: 0;
+            font-size: 15px;
+            font-weight: 700;
+            color: #353535;
+            @include flex(row);
+            align-items: flex-end;
+        }
+    }
+}

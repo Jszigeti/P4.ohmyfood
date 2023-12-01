@@ -1,0 +1,10 @@
+// VARIABLES //
+$main-color: #9356DC;
+$secondary-color: #FF79DA;
+$third-color: #99E2D0;
+
+// MIXIN //
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}

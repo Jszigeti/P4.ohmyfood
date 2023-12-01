@@ -1,0 +1,58 @@
+.loader {
+    position: fixed;
+    display: grid;
+    inset: 0;
+    height: 100vh;
+    background: #fff;
+    place-items: center;
+    opacity: 0.75;
+    z-index: 1;
+    animation: loader 1s linear 4s forwards;
+
+    &::after {
+        content: "ohmyfood";
+        font-family: shrikhand, serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: #101010;
+        animation: load2 2s ease-in-out infinite;
+    }
+}
+
+@keyframes loader {
+    0% {
+        opacity: 0.75;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes loading {
+    20% {
+        transform: scale(1.5);
+    }
+
+    80% {
+        transform: scale(1.5) rotate(360deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@keyframes load2 {
+    20% {
+        transform: scale(0.7);
+    }
+
+    80% {
+        transform: scale(0.7) rotate(360deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
