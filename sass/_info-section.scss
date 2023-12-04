@@ -3,10 +3,17 @@
     background-color: #FFF;
     padding: 48px 0 68px 0;
     @include flex(column);
-    gap: 26px;
+    gap: 25px;
+    @media (min-width: 1025px) {
+        padding: 50px 180px;
+    }
     &__bubblescontainer {
         @include flex(column);
         gap: 24.94px;
+        @media (min-width: 1025px) {
+            flex-direction: row;
+            gap: 36.51px;
+        }
     }
     &__bubble {
         border-radius: 20px;
@@ -18,22 +25,46 @@
         justify-content: space-between;
         margin: 0 20px 0 32.51px;
         padding: 0 38px 0 33px;
+        position: relative;
+        @media (min-width: 600px) {
+            justify-content: center;
+            text-align: center;
+        }
+        @media (min-width: 1025px) {
+            justify-content: flex-start;
+            gap: 20px;
+            text-align: unset;
+            width: 33%;
+            margin: 0;
+        }
+        & img {
+            @media (min-width: 600px) {
+                position: absolute;
+                left: 67px;
+            }
+            @media (min-width: 1025px) {
+                position: unset;
+            }
+        }
         &--number {
             @include flex(row);
             justify-content: center;
             align-items: center;
             color: #fff;
             background-color: $main-color;
-            width: 22px;
-            height: 22px;
+            width: 24px;
+            height: 24px;
             border-radius: 11px;
             font-style: normal;
             font-size: 14.182px;
             position: absolute;
-            left: 20px;
+            left: -12px;
         }
         &--text {
             width: 211px;
+            @media (min-width: 1025px) {
+                width: unset;
+            }
         }
     }
 }

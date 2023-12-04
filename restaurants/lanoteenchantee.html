@@ -27,12 +27,15 @@
         <section class="main-container">
             <section class="main-container__title">
                 <h2>La note enchantée</h2>
-                <div>
-                    <img class="empty-heart" src="../assets/images/icon/unliked-heart.png" alt="empty heart icon">
-                    <img class="filled-heart" src="../assets/images/icon/liked-heart.png" alt="filled heart icon">
+                <div class="heart-container">
+                    <input type="checkbox" id="like" class="heart-container__input">
+                    <label for="like" class="heart-container__label">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-solid fa-heart"></i>            
+                    </label>
                 </div>
             </section>
-            <section class="main-container__block">
+            <section class="main-container__block entrees">
                 <h3 class="main-container__block--title"><span>ENTR</span>ÉES</h3>
                 <a class="main-container__block--link" href="#">
                     <article class="restaurant-card">
@@ -79,7 +82,7 @@
                     </article>
                 </a>
             </section>
-            <section class="main-container__block">
+            <section class="main-container__block plats">
                 <h3 class="main-container__block--title"><span>PLAT</span>S</h3>
                 <a class="main-container__block--link" href="#">
                     <article class="restaurant-card">
@@ -115,7 +118,7 @@
                     </article>
                 </a>
             </section>
-            <section class="main-container__block">
+            <section class="main-container__block desserts">
                 <h3 class="main-container__block--title"><span>DESS</span>ERTS</h3>
                 <a class="main-container__block--link" href="#">
                     <article class="restaurant-card">

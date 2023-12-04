@@ -8,6 +8,7 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 .section-title {
@@ -15,8 +16,12 @@ a {
     font-weight: 700;
     color: #000;
     margin: 0 0 0 20px;
+    @media (min-width: 1025px) {
+        margin: 0;
+    }
 }
 
+// MENTION "NEW" //
 .new {
     font-size: 14px;
     color: #008766;
@@ -32,15 +37,4 @@ a {
     position: absolute;
     top: 15px;
     right: 15px;
-}
-
-.empty-heart {
-    position: absolute;
-}
-.filled-heart {
-    opacity: 0;
-    position: relative;
-}
-.filled-heart:hover {
-    opacity: 1;
 }

@@ -4,9 +4,20 @@
     @include flex(column);
     align-items: center;
     text-align: center;
+    padding: 0 25px;
+    @media (min-width: 1025px) {
+        padding: 30px 25px;
+    }
     & h2 {
         margin: 39px 0 0 0;
         height: 68px;
+        @media (min-width: 600px) {
+            font-size: 32px;
+        }
+        @media (min-width: 1025px) {
+            font-size: 40px;
+            margin: 0;
+        }
     }
     &__subtitle {
         font-size: 18px;
@@ -25,6 +36,9 @@
         margin-top: 27px;
         margin-bottom: 57px;
         width: 218px;
+        @media (min-width: 1025px) {
+            margin-bottom: 0;
+        }
     }
   &__btn:hover {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, $main-color, $secondary-color);

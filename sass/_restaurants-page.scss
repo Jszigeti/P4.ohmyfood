@@ -101,13 +101,14 @@ main {
     @include flex(row);
     align-items: center;
     justify-content: space-between;
-    padding: 15px;
     gap: 5px;
+    overflow: hidden;
     &__content {
         @include flex(column);
         gap: 5px;
         white-space: nowrap;
         overflow: hidden;
+        margin: 15px 0 15px 15px;
         &--title {
             margin: 0;
             font-size: 18px;
@@ -128,7 +129,7 @@ main {
         }
     }
     &__price {
-        
+        margin: 15px 15px 15px 0;
         p {
             height: 45px;
             margin: 0;

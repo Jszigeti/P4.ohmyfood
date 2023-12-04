@@ -1,0 +1,181 @@
+// LOADER //
+.loader {
+    position: fixed;
+    display: grid;
+    inset: 0;
+    background: #fff;
+    place-items: center;
+    opacity: 0.75;
+    z-index: 1;
+    animation: loader 0.5s linear 3s forwards;
+
+    &::after {
+        content: "ohmyfood";
+        font-family: shrikhand, serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: #101010;
+        animation: loading 1.5s ease-in-out infinite;
+
+        @media (min-width: 1025px) {
+            font-size: 50px;
+        }
+    }
+}
+
+@keyframes loader {
+    0% {
+        opacity: 0.75;
+    }
+
+    10% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes loading {
+    20% {
+        transform: scale(0.7);
+    }
+
+    80% {
+        transform: scale(0.7) rotate(360deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+
+// SLIDE IN ANIMATION //
+@mixin slide-in($animation-delay) {
+    animation: slide-in 0.8s $animation-delay forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translateX(150%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.entrees {
+    transform: translateX(150%);
+    @include slide-in(0.333s);
+}
+
+.plats {
+    transform: translateX(150%);
+    @include slide-in(0.666s);
+}
+
+.desserts {
+    transform: translateX(150%);
+    @include slide-in(1s);
+}
+
+.main-container__btn {
+    transform: translateX(200%);
+    @include slide-in(1.333s);
+}
+
+
+// SELECT ANIMATION //
+.select-button {
+    height: 75px;
+    width: 59px;
+    background: $third-color;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 22px;
+        height: 22px;
+        border: 1px solid $third-color;
+        border-radius: 50%;
+        background: white;
+    }
+}
+
+.fa-check {
+    color: $third-color;
+
+}
+
+@keyframes select-button {
+    0% {
+        transform: translate(100%);
+    }
+
+}
+
+
+// LIKE ANIMATION //
+.fa-heart {
+    font-size: 22px;
+}
+
+.fa-regular {
+    position: absolute;
+}
+
+.fa-solid {
+    transform: scale(0);
+    position: relative;
+    background: linear-gradient($main-color, $secondary-color);
+    background-clip: text;
+    color: transparent;
+    transform-origin: bottom;
+}
+
+.heart-container {
+    &__input {
+        display: none;
+
+        &:checked+.heart-container__label {
+            .fa-solid {
+                animation: appear 1s linear forwards;
+            }
+        }
+
+        &:not(:checked)+.heart-container__label {
+            .fa-solid {
+                animation: disappear 1s linear forwards;
+            }
+        }
+    }
+}
+
+@keyframes disappear {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes appear {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
