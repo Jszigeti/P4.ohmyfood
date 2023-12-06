@@ -370,26 +370,14 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 16px 33px 12px 13px;
-}
-.card__content--text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 16px 33px 12px 13px;
   gap: 5px;
 }
 .card__content--title {
@@ -403,16 +391,6 @@ a {
   font-weight: 300;
   color: #000;
   margin: 0;
-}
-.card__content--emptyheart {
-  position: absolute;
-}
-.card__content--filledheart {
-  opacity: 0;
-  position: relative;
-}
-.card__content--filledheart:hover {
-  opacity: 1;
 }
 
 header .header__title {
@@ -686,12 +664,18 @@ header .header__location {
 }
 .restaurants-section__link {
   margin: 0 18px 0 17px;
+  position: relative;
 }
 @media (min-width: 1281px) {
   .restaurants-section__link {
     margin: 0;
     width: 50%;
   }
+}
+.restaurants-section .heart-container {
+  position: absolute;
+  bottom: 25px;
+  right: 25px;
 }
 
 footer {
