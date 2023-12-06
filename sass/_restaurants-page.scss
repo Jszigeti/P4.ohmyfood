@@ -1,36 +1,42 @@
 // HEADER //
+
 .header__banner {
     @include flex(row);
     gap: 42px;
     align-items: center;
     justify-content: center;
     padding: 14px 0 13px 0;
+
     &--goback {
-      position: absolute;
-      left: 17px;
+        position: absolute;
+        left: 17px;
     }
+
     &--title {
-      background-color: #FFF;
-      font-family: shrikhand, serif;
-      font-size: 30px;
-      font-weight: 400;
-      color: #101010;
-      text-align: center;
-      margin: 0;
-      padding: 0px 19px 0px 16px;
+        background-color: #FFF;
+        font-family: shrikhand, serif;
+        font-size: 30px;
+        font-weight: 400;
+        color: #101010;
+        text-align: center;
+        margin: 0;
+        padding: 0px 19px 0px 16px;
     }
-  }
+}
 
 // MAIN //
-main {
-    
-       
+.restaurantspage {
+    @media (min-width: 1025px) {
+        @include flex(column);
+        align-items: center;
+    }
 }
 .restaurantspage-cover {
     height: 275px;
     object-fit: cover;
     width: 100%;
-    }
+}
+
 .main-container {
     position: relative;
     background: #f6f6f6;
@@ -41,6 +47,14 @@ main {
     align-items: center;
     gap: 40px;
     padding-bottom: 40px;
+    @media (min-width: 1025px) {
+        width: 1025px;
+        overflow: hidden;
+      }
+    @media (min-width: 1280px) {
+        width: 1045px;
+    }
+
     &__title {
         @include flex(row);
         justify-content: space-between;
@@ -48,6 +62,11 @@ main {
         padding: 32px 17px 0 17px;
         margin: 0 17px;
         width: 90%;
+        @media (min-width: 1025px) {
+            justify-content: center;
+            gap: 24px;
+          }
+
         & h2 {
             font-family: shrikhand, serif;
             font-size: 28px;
@@ -55,27 +74,29 @@ main {
             color: #101010;
             margin: 0;
         }
-
     }
+
     &__block {
         @include flex(column);
         gap: 12px;
         width: 100%;
+        @media (min-width: 1025px) {
+            width: unset;
+          }
         &--title {
             font-size: 16px;
             font-weight: 300;
             color: #000;
             margin: 0 0 0 13px;
             height: 27px;
+
             & span {
                 border-bottom: 3px solid $third-color;
                 padding-bottom: 5px;
             }
         }
-        &--link {
-
-        }
     }
+
     &__btn {
         border-radius: 25px;
         background: linear-gradient(193deg, $main-color, $secondary-color);
@@ -86,6 +107,7 @@ main {
         width: 186px;
         text-align: center;
     }
+
     &__btn:hover {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.15) 100%), linear-gradient(201deg, $main-color, $secondary-color);
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.35);
@@ -93,51 +115,69 @@ main {
 }
 
 // RESTAURANT CARD //
+
 .restaurant-card {
     border-radius: 15px;
     background: #fff;
     box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.10);
-    margin: 0 13px 0 13px;
-    @include flex(row);
-    align-items: center;
-    justify-content: space-between;
-    gap: 5px;
+    margin: 0 13px;
     overflow: hidden;
-    &__content {
-        @include flex(column);
+    @media (min-width: 1025px) {
+        width: 634px;
+      }
+
+    &-box {
+        width: calc(100% + 59px);
+        @include flex(row);
+        justify-content: space-between;
+        align-items: center;
         gap: 5px;
-        white-space: nowrap;
         overflow: hidden;
-        margin: 15px 0 15px 15px;
-        &--title {
-            margin: 0;
-            font-size: 18px;
-            font-weight: 500;
-            color: #000;
+
+        &__content {
+            @include flex (column);
+            gap: 5px;
             white-space: nowrap;
             overflow: hidden;
-            text-overflow: ellipsis;
+            margin: 15px 0 15px 15px;
+
+            &--title {
+                margin: 0;
+                font-size: 18px;
+                font-weight: 500;
+                color: #000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            &--subtitle {
+                margin: 0;
+                font-size: 15px;
+                font-weight: 300;
+                color: #000;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
-        &--subtitle {
-            margin: 0;
-            font-size: 15px;
-            font-weight: 300;
-            color: #000;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    &__price {
-        margin: 15px 15px 15px 0;
-        p {
-            height: 45px;
-            margin: 0;
-            font-size: 15px;
-            font-weight: 700;
-            color: #353535;
+
+        &__price-and-select {
             @include flex(row);
-            align-items: flex-end;
+
+            &--price {
+                margin: 15px 15px 15px 0;
+
+                & p {
+                    height: 45px;
+                    margin: 0;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #353535;
+                    @include flex(row);
+                    align-items: flex-end;
+                }
+            }
         }
     }
+
+    
 }
