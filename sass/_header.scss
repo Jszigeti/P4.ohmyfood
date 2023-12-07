@@ -1,22 +1,23 @@
 // HEADER //
 header {
-    .header__title {
-        background-color: #FFF;
-        margin: 14px 89px 13px 89px;
-        font-family: shrikhand, serif;
-        font-size: 30px;
-        font-weight: 400;
-        color: #101010;
-        text-align: center;
-    }
-    .header__location {
-      color: #353535;
-      @include flex(row);
-      align-items: center;
-      justify-content: center;
-      background-color: #EAEAEA;
-      width: 100%;
-      gap: 17px;
-      height: 50px;
-    }
+  .header__title {
+    background-color: #FFF;
+    margin: 14px 89px 13px 89px;
+    font-family: shrikhand, serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #101010;
+    text-align: center;
+  }
+
+  .header__location {
+    color: #353535;
+    @include flex(row);
+    align-items: center;
+    justify-content: center;
+    background-color: #EAEAEA;
+    width: 100%;
+    gap: 17px;
+    height: 50px;
+  }
 }

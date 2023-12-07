@@ -16,6 +16,7 @@ a {
     font-weight: 700;
     color: #000;
     margin: 0 0 0 20px;
+
     @media (min-width: 1025px) {
         margin: 0;
     }
@@ -29,7 +30,7 @@ a {
     height: 29px;
     background: $third-color;
     border-radius: 2px;
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.15);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
     @include flex(row);
     justify-content: center;
     align-items: center;

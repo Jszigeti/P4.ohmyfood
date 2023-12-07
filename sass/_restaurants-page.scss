@@ -1,5 +1,4 @@
 // HEADER //
-
 .header__banner {
     @include flex(row);
     gap: 42px;
@@ -30,11 +29,12 @@
         @include flex(column);
         align-items: center;
     }
-}
-.restaurantspage-cover {
-    height: 275px;
-    object-fit: cover;
-    width: 100%;
+
+    &-cover {
+        height: 275px;
+        object-fit: cover;
+        width: 100%;
+    }
 }
 
 .main-container {
@@ -47,10 +47,12 @@
     align-items: center;
     gap: 40px;
     padding-bottom: 40px;
+
     @media (min-width: 1025px) {
         width: 1025px;
         overflow: hidden;
-      }
+    }
+
     @media (min-width: 1280px) {
         width: 1045px;
     }
@@ -62,10 +64,11 @@
         padding: 32px 17px 0 17px;
         margin: 0 17px;
         width: 90%;
+
         @media (min-width: 1025px) {
             justify-content: center;
             gap: 24px;
-          }
+        }
 
         & h2 {
             font-family: shrikhand, serif;
@@ -80,9 +83,11 @@
         @include flex(column);
         gap: 12px;
         width: 100%;
+
         @media (min-width: 1025px) {
             width: unset;
-          }
+        }
+
         &--title {
             font-size: 16px;
             font-weight: 300;
@@ -115,7 +120,6 @@
 }
 
 // RESTAURANT CARD //
-
 .restaurant-card {
     border-radius: 15px;
     background: #fff;
@@ -123,9 +127,10 @@
     margin: 0 13px;
     overflow: hidden;
     position: relative;
+
     @media (min-width: 1025px) {
         width: 634px;
-      }
+    }
 
     &-box {
         width: calc(100% + 59px);
@@ -180,5 +185,5 @@
         }
     }
 
-    
+
 }

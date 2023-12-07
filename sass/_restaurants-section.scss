@@ -1,37 +1,43 @@
 // RESTAURANTS SECTION //
 .restaurants-section {
-    background: #F6F6F6;
+  background: #F6F6F6;
+  @include flex(column);
+  gap: 18px;
+  padding: 54px 0 66px 0;
+
+  @media (min-width: 769px) {
+    padding: 15px 90px;
+  }
+
+  @media (min-width: 1281px) {
+    padding: 30px 180px;
+    gap: 28px;
+  }
+
+  &__row {
     @include flex(column);
     gap: 18px;
-    padding: 54px 0 66px 0;
-    @media (min-width: 769px) {
-      padding: 15px 90px;
-    }
+
     @media (min-width: 1281px) {
-      padding: 30px 180px;
-      gap: 28px;
+      flex-direction: row;
+      gap: 100px;
+      width: 100%;
     }
-    &__row {
-      @include flex(column);
-      gap: 18px;
-      @media (min-width: 1281px) {
-        flex-direction: row;
-        gap: 100px;
-        width: 100%;
-      }
+  }
+
+  &__link {
+    margin: 0 18px 0 17px;
+    position: relative;
+
+    @media (min-width: 1281px) {
+      margin: 0;
+      width: 50%;
     }
-    &__link {
-      margin: 0 18px 0 17px;
-      position: relative;
-      @media (min-width: 1281px) {
-        margin: 0;
-        width: 50%;
-      }
-    }& .heart-container {
+  }
+
+  & .heart-container {
     position: absolute;
     bottom: 25px;
     right: 25px;
-    } 
   }
-
-  
+}
