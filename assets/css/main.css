@@ -271,8 +271,6 @@ a {
 }
 
 .filled-heart {
-  -webkit-transform: scale(0);
-          transform: scale(0);
   position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
   background: linear-gradient(#9356DC, #FF79DA);
@@ -281,8 +279,6 @@ a {
   color: transparent;
   -webkit-transform-origin: bottom;
           transform-origin: bottom;
-  -webkit-animation: hiding 1ms forwards;
-          animation: hiding 1ms forwards;
 }
 
 .heart-container__input {
@@ -319,32 +315,12 @@ a {
   }
 }
 @-webkit-keyframes disappear {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-@keyframes disappear {
-  0% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-  100% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-}
-@-webkit-keyframes hiding {
   to {
     -webkit-transform: scale(0);
             transform: scale(0);
   }
 }
-@keyframes hiding {
+@keyframes disappear {
   to {
     -webkit-transform: scale(0);
             transform: scale(0);
