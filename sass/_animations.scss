@@ -94,16 +94,20 @@
 // SELECT ANIMATION //
 
 .select {
+    &__label {
+        position: absolute;
+        inset: 0;
+    }
 
     &__input {
         display: none;
 
-        &:checked + .select__label {
+        &:checked + .restaurant-card {
             .restaurant-card-box {
                 animation: minimize 0.5s linear forwards;
             }
         }
-        &:not(:checked) + .select__label {
+        &:not(:checked) + .restaurant-card {
             .restaurant-card-box {
                 animation: maximize 0.5s linear forwards;
             }

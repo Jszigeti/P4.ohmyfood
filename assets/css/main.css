@@ -179,14 +179,18 @@ a {
           animation: slide-in 0.8s 1.333s forwards;
 }
 
+.select__label {
+  position: absolute;
+  inset: 0;
+}
 .select__input {
   display: none;
 }
-.select__input:checked + .select__label .restaurant-card-box {
+.select__input:checked + .restaurant-card .restaurant-card-box {
   -webkit-animation: minimize 0.5s linear forwards;
           animation: minimize 0.5s linear forwards;
 }
-.select__input:not(:checked) + .select__label .restaurant-card-box {
+.select__input:not(:checked) + .restaurant-card .restaurant-card-box {
   -webkit-animation: maximize 0.5s linear forwards;
           animation: maximize 0.5s linear forwards;
 }
@@ -922,6 +926,7 @@ footer .footer__link {
           box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   margin: 0 13px;
   overflow: hidden;
+  position: relative;
 }
 @media (min-width: 1025px) {
   .restaurant-card {
