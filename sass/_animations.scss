@@ -9,7 +9,7 @@
     background: #fff;
     opacity: 0.75;
     z-index: 2;
-    animation: loader 0.5s linear 3s forwards;
+    animation: loader 0.5s 3s forwards;
 
     &::after {
         content: "ohmyfood";
@@ -62,11 +62,7 @@
 }
 
 @keyframes slide-in {
-    0% {
-        transform: translateX(150%);
-    }
-
-    100% {
+    to {
         transform: translateX(0);
     }
 }
