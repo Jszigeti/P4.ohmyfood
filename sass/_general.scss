@@ -1,41 +1,62 @@
 // GENERAL //
 body {
-    margin: 0;
-    font-family: roboto, sans serif;
-    font-size: 16px;
-    font-weight: 500;
+  margin: 0;
+  font-family: roboto, sans serif;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
 .section-title {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000;
-    margin: 0 0 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 0 20px;
 
-    @media (min-width: 1025px) {
-        margin: 0;
-    }
+  @media (min-width: 1025px) {
+    margin: 0;
+  }
 }
 
 // MENTION "NEW" //
 .new {
-    font-size: 14px;
-    color: #008766;
-    width: 80px;
-    height: 29px;
-    background: $third-color;
-    border-radius: 2px;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-    @include flex(row);
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    position: absolute;
-    top: 15px;
-    right: 15px;
+  font-size: 14px;
+  color: #008766;
+  width: 80px;
+  height: 29px;
+  background: $third-color;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  @include flex(row);
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.return-button {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  background-color: grey;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.return-arrow {
+  display: inline-block;
+  transform: rotate(180deg);
+  margin-right: 10px;
 }
